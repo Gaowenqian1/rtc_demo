@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+#videoContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#videoElement {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*top: 25%;*/
+    /*object-fit: contain; !* 保持视频的原始宽高比例，并尽可能填充整个容器 *!*/
+}
+/*video {*/
+/*    width: 50%;*/
+/*    height: 50%;*/
+/*}*/
+#toggleButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+#takePhoto {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+#sendImgToServer {
+    position: absolute;
+    top: 20px;
+    right: 170px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+#changeDisplay {
+    position: absolute;
+    top: 20px;
+    right: 230px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+#photo {
+    display: none;
+    width: 100%;
+    position: relative;
+    top: 25%;
+    object-fit: contain; /* 保持视频的原始宽高比例，并尽可能填充整个容器 */
+}
