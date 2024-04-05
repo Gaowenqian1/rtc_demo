@@ -29,6 +29,12 @@ public class LoginController {
         return "file.jsp";
     }
 
+    @RequestMapping("/choose")
+    public String choose() {
+
+        return "html5Demp.jsp";
+    }
+
     @RequestMapping("/index1")
     public String index1() {
 

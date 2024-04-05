@@ -12,7 +12,7 @@
     <title>WebRtcDemo</title>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
-    <link  rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 <body>
 <div id="videoContainer">
