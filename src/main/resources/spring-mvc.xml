@@ -31,4 +31,5 @@
         <property name="prefix" value="/WEB-INF/jsp/"/>
     </bean>
 
+    <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver" />
 </beans>

@@ -20,14 +20,22 @@
     <button id="toggleButton" onclick="changeCamera()">切换摄像头</button>
     <canvas id="canvas" style="display: none;"></canvas>
     <button id="takePhoto" onclick="takePhoto()">拍照</button>
+    <button id="takePhoto1" onclick="showAngle()">show angle</button>
+
+<%--    <select id="changeDisplay" onchange="changeDisplay()">--%>
+<%--        <option value="A">1280*720</option>--%>
+<%--        <option value="B">1440*900</option>--%>
+<%--        <option value="C">1600*900</option>--%>
+<%--        <option value="D">1920*1080</option>--%>
+<%--    </select>--%>
+
+</div>
+<div id="imageContainer" style="display: none;">
     <button id="sendImgToServer" onclick="sendImgToServer()">上传</button>
-    <select id="changeDisplay" onchange="changeDisplay()">
-        <option value="A">1280*720</option>
-        <option value="B">1440*900</option>
-        <option value="C">1600*900</option>
-        <option value="D">1920*1080</option>
-    </select>
+
+    <button id="retake" onclick="cancle()">重拍</button>
     <img id="photo" src="#"/>
 </div>
+<span style="color:white">angle:<p style="color:white" id="angle"></p></span>
 </body>
 </html>

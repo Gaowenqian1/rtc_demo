@@ -24,6 +24,11 @@
         }
     </script>
 </head>
+<style>
+    input[type="file"]::-webkit-media-capture {
+
+    }
+</style>
 <body>
 
     <input type="file" accept="image/*" onchange="previewImage(event)"/>

@@ -8,8 +8,17 @@ body, html {
 }
 #videoContainer {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    left: 25%;
+    height:50%;
+    top:25%;
+}
+#imageContainer {
+    position: relative;
+    width: 50%;
+    left: 25%;
+    height:50%;
+    top:25%;
 }
 #videoElement {
     width: 100%;
@@ -44,10 +53,32 @@ body, html {
     padding: 10px;
     cursor: pointer;
 }
+#takePhoto1 {
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
 #sendImgToServer {
     position: absolute;
     top: 20px;
     right: 170px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+#retake {
+    position: absolute;
+    top: 20px;
+    right: 210px;
     z-index: 1000;
     background-color: #ffffff;
     border: 1px solid #cccccc;
