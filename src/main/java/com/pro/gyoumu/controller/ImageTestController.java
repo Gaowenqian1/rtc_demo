@@ -3,6 +3,10 @@ package com.pro.gyoumu.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.drew.imaging.ImageMetadataReader;
+import com.drew.metadata.Metadata;
+import com.drew.metadata.MetadataException;
+import com.drew.metadata.exif.ExifIFD0Directory;
 import jakarta.servlet.http.HttpServletRequest;
 import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.stereotype.Controller;
@@ -39,14 +43,23 @@ public class ImageTestController {
 
     @RequestMapping("/upload")
     @ResponseBody
-    public String upload(HttpServletRequest request, @RequestBody String img) {
+    public String upload(HttpServletRequest request, @RequestBody String img) throws MetadataException {
         JSONObject jsonObject = new JSONObject();
         try {
             // upload
             if(request instanceof MultipartHttpServletRequest) {
                 MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
                 MultipartFile multipartFile = multipartHttpServletRequest.getFile("file");
+
                 BufferedImage image = ImageIO.read(multipartFile.getInputStream());
+                Metadata metadata = ImageMetadataReader.readMetadata(multipartFile.getInputStream());
+
+                // 获取 EXIF IFD0 Directory (其中包含 Orientation 信息)
+                ExifIFD0Directory directory = metadata.getFirstDirectoryOfType(ExifIFD0Directory.class);
+
+                // 读取 Orientation 标签
+                int orientation = directory.getInt(ExifIFD0Directory.TAG_ORIENTATION);
+                System.out.println("Orientation: " + orientation);
                 int width, height;
                 if(image.getHeight() > image.getWidth()) {
                     width = 450;
